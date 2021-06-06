@@ -1,0 +1,39 @@
+<!-- 5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return. -->
+
+<script>
+
+    function sum(a, b) {
+        sum = a + b;
+        alert('Сумма чисел a и b равна = ' + sum);
+        return sum;
+    }
+
+    function subtraction(a, b) {
+        sub = a - b;
+        alert('Разница чисел a и b равна = ' + sub);
+        return sub;
+    }
+
+    function multiplication(a, b) {
+        mp = a * b;
+        alert('Умножение чисел a и b равна = ' + mp);
+        return mp;
+    }
+
+    function division(a, b) {
+        div = a / b;
+        alert('Деление чисел a и b равна = ' + div);
+        return div;
+    }
+
+    var a = +prompt('Ввведите число a =');
+    var b = +prompt('Введите число b =');
+
+    sum(a, b);
+    subtraction(a, b);
+    multiplication(a, b);
+    division(a, b);
+
+
+
+</script>

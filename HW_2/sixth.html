@@ -1,0 +1,47 @@
+<!-- 6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch). -->
+<script>
+
+    function sum(a, b) {
+        sum = a + b;
+        alert('Сумма чисел a и b равна = ' + sum);
+        return sum;
+    }
+
+    function subtraction(a, b) {
+        sub = a - b;
+        alert('Разница чисел a и b равна = ' + sub);
+        return sub;
+    }
+
+    function multiplication(a, b) {
+        mp = a * b;
+        alert('Умножение чисел a и b равна = ' + mp);
+        return mp;
+    }
+
+    function division(a, b) {
+        div = a / b;
+        alert('Деление чисел a и b равна = ' + div);
+        return div;
+    }
+
+    function mathOperation(a, b, operation) {
+        switch (operation) {
+            case "сумма": sum(a, b);
+                break;
+            case "вычитание": subtraction(a, b);
+                break;
+            case "умножение": multiplication(a, b);
+                break;
+            case "деление": division(a, b);
+                break;
+        }
+    }
+
+    var a = +prompt('Ввведите число a =');
+    var b = +prompt('Введите число b =');
+    var operation = prompt('Ввведите название арифметической операции:\n "сумма", "вычитание", "умножение", "деление"');
+
+    mathOperation(a, b, operation);
+
+</script>

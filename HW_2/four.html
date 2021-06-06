@@ -1,0 +1,23 @@
+<!-- 4. Присвоить переменной а значение в промежутке [0..15].
+С помощью оператора switch организовать вывод чисел от a до 15.
+Можно сделать второй способ решения, используя рекурсию -->
+
+<script>
+
+    function countDown(a) {
+        if (a == 15) {
+            return;
+        }
+        ++a;
+        console.log(a);
+        countDown(a);
+    }
+
+
+    var a = (Math.random() * (15 - 0) + 0).toFixed(0);
+
+    alert('Число a = ' + a);
+    console.log(a);
+    countDown(a);
+
+</script>
