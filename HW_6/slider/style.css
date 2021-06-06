@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 1000px;
+    height: 480px;
+    margin-top: 20px;
+    margin-left: 180px; 
+}
+
+body {
+    width: 1360px;
+    margin: 0 auto;
+}
+
+#imageCount {
+    margin-left: 680px;
+}
+
+.buttons {
+    margin-left: 600px;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+}

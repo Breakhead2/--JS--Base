@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            width: 1360px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+</head>
+
+<body>
+    <div id="image-box">
+        <img src="small/p0.jpg" id="img0" style="width: 450px; height: 250px" alt="photo_0">
+        <img src="small/p1.jpg" id="img1" style="width: 450px; height: 250px" alt="photo_1">
+        <img src="small/p2.jpg" id="img2" style="width: 450px; height: 250px" alt="photo_2">
+    </div>
+    <div id="big"></div>
+
+
+    <script>
+        window.onload = bigImage;
+
+        var images = document.querySelectorAll("img");
+
+        for (i = 0; i < images.length; i++) {
+            images[i].addEventListener("click", bigImage);
+            function bigImage(e) {
+                var newDiv = document.getElementById("big");
+                newDiv.innerHTML = "";
+                var imageBig = document.createElement("img");
+                imageBig.src = "big/p" + (e.target.id[3]) + ".jpg";
+                imageBig.style.width = "1000px";
+                imageBig.style.height = "480px";
+                imageBig.style.margin = "10px";
+                newDiv.appendChild(imageBig);
+                imageBig.onerror = function () {
+                    alert('Файл не найден');
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
