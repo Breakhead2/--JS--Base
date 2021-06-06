@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table {
+    font-size: 25px;
+    color: #020100;
+    border: 1px solid black;
+}
+td {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+}
+
+td:last-child{
+    transform: rotate(180deg);
+}
+
+.white{
+    background-color: #fff;
+}
+.gray{
+    background-color: gray;
+}
