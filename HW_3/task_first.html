@@ -1,0 +1,49 @@
+<!-- 1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100. -->
+<script>
+    var n = 100, i = 2;
+
+    while (i <= n) {
+        var j = 2;
+        while (j <= i) {
+            if (i % j == 0) {
+                break;
+            }
+            j++;
+        }
+        if (j == i) {
+            document.write(" " + i + " ");
+        }
+        i++;
+    }
+
+
+
+
+    // simpleNumber:
+
+    // while (i < n) {
+    //     for (var j = 2; j < i; j++) {
+    //         if (i % j == 0) {
+    //             continue simpleNumber;
+    //         }
+    //     }
+    //     document.write(" " + i + " ");
+    //     i++;
+    // }
+
+
+    // simpleNumber:
+
+    // while (i <= 10) {
+    //     while (j <= i) {
+    //         if (i % j == 0) {
+    //             continue simpleNumber;
+    //         }
+    //         j++;
+    //     }
+    //     document.write(" " + i + " ");
+    //     i++;
+    // }
+
+
+</script>
