@@ -1,0 +1,41 @@
+<!-- Создать функцию, генерирующую шахматную доску. При этом можно использовать любые html-теги по своему желанию. Доска должна быть разлинована соответствующим образом, т.е. чередовать черные и белые ячейки. Строки должны нумероваться числами от 1 до 8, столбцы – латинскими буквами A, B, C, D, E, F, G, H. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Desk</title>
+</head>
+
+<body>
+
+    <div id="chessDesk"></div>
+
+
+    <script>
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var letters = ["a", "b", "c", "d", "e", "f", "g", "h"];
+
+        var chessDesk = document.createElement("table");
+        var tr, td, th;
+
+        for (i = 0; i < 12; i++) {
+            tr = document.createElement("tr");
+            for (j = 0; j < 12; j++) {
+                if ((i == 0 && j == 0) || (i == 11 && j == 11)) {
+                    td = document.createElement("td");
+                    td.innerText = " ";
+                } else if (i == 0 || i == 11) {
+                    td = td = document.createElement("td");
+                    td.innerText = letters[i];
+                }
+            }
+        }
+
+        document.getElementById("chessDesk").append(chessDesk);
+    </script>
+</body>
+
+</html>
